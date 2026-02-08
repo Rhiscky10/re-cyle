@@ -1,18 +1,13 @@
-// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-export default defineConfig(({ command }) => ({
-  base: command === "build" ? "/re-e-cycle-main/" : "/", // <--- key trick
-  server: {
-    host: "::",
-    port: 8080,
-  },
+export default defineConfig({
+  base: "/re-e-cycle-main/",
   plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-}));
+});

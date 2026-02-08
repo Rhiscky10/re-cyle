@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig(({ command }) => ({
-  base: command === "build" ? "/ecowaste/" : "/", // <--- key trick
+  base: command === "build" ? "/re-e-cycle-main/" : "/", // <--- key trick
   server: {
     host: "::",
     port: 8080,
